@@ -104,6 +104,27 @@ include('../app/controllers/almacen/listado_de_productos.php');
                                                 </td>
                                                 <td><?php echo $productos_dato['nombre']; ?></td>
                                                 <td><?php echo $productos_dato['descripcion']; ?></td>
+                                                <?php
+                                                $stock_actual =  $productos_dato['stock'];
+                                                $stock_maximo =  $productos_dato['stock_maximo'];
+                                                $stock_minimo =  $productos_dato['stock_minimo'];
+                                                if ($stock_actual < $stock_minimo) { ?>
+                                                    <td style="background-color: #EF4040;">
+                                                        <center><?php echo $productos_dato['stock']; ?></center>
+                                                    </td>
+                                                <?php
+                                                } else if ($stock_actual > $stock_maximo) { ?>
+                                                    <td style="background-color: #4BA54D;">
+                                                        <center><?php echo $productos_dato['stock']; ?></center>
+                                                    </td>
+                                                <?php
+                                                } else { ?>
+                                                    <td>
+                                                        <center><?php echo $productos_dato['stock']; ?></center>
+                                                    </td>
+                                                <?php
+                                                }
+                                                ?>
                                                 <td><?php echo $productos_dato['stock']; ?></td>
                                                 <!-- <td><?php echo $productos_dato['stock_minimo']; ?></td>
                                             <td><?php echo $productos_dato['stock_maximo']; ?></td> -->
