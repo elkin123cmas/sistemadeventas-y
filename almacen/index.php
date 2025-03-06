@@ -64,12 +64,7 @@ include('../app/controllers/almacen/listado_de_productos.php');
                                             <th>
                                                 <center>Stock</center>
                                             </th>
-                                            <!-- <th>
-                                            <center>Stock minimo</center>
-                                        </th>
-                                        <th>
-                                            <center>Stock maximo</center>
-                                        </th> -->
+
                                             <th>
                                                 <center>Precio compra</center>
                                             </th>
@@ -125,9 +120,6 @@ include('../app/controllers/almacen/listado_de_productos.php');
                                                 <?php
                                                 }
                                                 ?>
-                                                <td><?php echo $productos_dato['stock']; ?></td>
-                                                <!-- <td><?php echo $productos_dato['stock_minimo']; ?></td>
-                                            <td><?php echo $productos_dato['stock_maximo']; ?></td> -->
                                                 <td><?php echo $productos_dato['precio_compra']; ?></td>
                                                 <td><?php echo $productos_dato['precio_venta']; ?></td>
                                                 <td><?php echo $productos_dato['fecha_ingreso']; ?></td>
@@ -146,21 +138,8 @@ include('../app/controllers/almacen/listado_de_productos.php');
                                         }
                                         ?>
                                     </tbody>
-                                    <!-- <tfoot>
-                                    <tr>
-                                        https://colanta.com/sabe-mas/wp-content/uploads/Leches.png
-                                        <th>
-                                            <center>Nro</center>
-                                        </th>
-                                        <th>
-                                            <center>Nombre Rol</center>
-                                        </th>
-                                        <th>
-                                            <center>Acciones</center>
-                                        </th>
 
-                                    </tr>
-                                </tfoot> -->
+
                                 </table>
                             </div>
 

@@ -47,130 +47,129 @@ include('../app/controllers/categorias/listado_de_categorias.php');
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body" style="display: block;">
-
-                            <table id="example1" class="table table-bordered table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>
-                                            <center>Nro</center>
-                                        </th>
-                                        <th>
-                                            <center>Nombre Categoria</center>
-                                        </th>
-                                        <th>
-                                            <center>Acciones</center>
-                                        </th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    $contador = 0;
-                                    foreach ($categorias_datos as $categorias_dato) {
-                                        $id_categorias = $categorias_dato['id_categoria'];
-                                        $nombre_categoria = $categorias_dato['nombre_categoria'];
-                                    ?>
+                            <div class="table table-responsive">
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
                                         <tr>
-                                            <td>
-                                                <center><?php echo $contador = $contador + 1; ?></center>
-                                            </td>
-                                            <td><?php echo $categorias_dato['nombre_categoria']; ?></td>
-                                            <td>
-                                                <center>
-                                                    <div class="btn-group">
-                                                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-update<?php echo $id_categorias; ?>">
-                                                            <i class="fa fa-pencil-alt"></i> Editar
-                                                        </button>
-                                                        <!-- modal para actualizar categorias-->
-                                                        <div class="modal fade" id="modal-update<?php echo $id_categorias; ?>">
-                                                            <div class="modal-dialog">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header" style="background-color:rgb(15, 119, 55); color: white">
-                                                                        <h4 class="modal-title">Actualizar Categoria</h4>
-                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                            <span aria-hidden="true">&times;</span>
-                                                                        </button>
-                                                                    </div>
-                                                                    <div class="modal-body">
-                                                                        <div class="row">
-                                                                            <div class="col-md-12">
-                                                                                <div class="form-group">
-                                                                                    <label for="">Nombre de la Categoria <b style="color:red;">*</b></label>
-                                                                                    <input type="text" class="form-control" id="nombre_categoria<?php echo $id_categorias; ?>" value="<?php echo $nombre_categoria; ?>">
-                                                                                    <small style="color:red; display:none;" id="lbl_update<?php echo $id_categorias; ?>"><b style="color:red;">*</b> Este campo es obligatorio</small>
+                                            <th>
+                                                <center>Nro</center>
+                                            </th>
+                                            <th>
+                                                <center>Nombre Categoria</center>
+                                            </th>
+                                            <th>
+                                                <center>Acciones</center>
+                                            </th>
 
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        $contador = 0;
+                                        foreach ($categorias_datos as $categorias_dato) {
+                                            $id_categorias = $categorias_dato['id_categoria'];
+                                            $nombre_categoria = $categorias_dato['nombre_categoria'];
+                                        ?>
+                                            <tr>
+                                                <td>
+                                                    <center><?php echo $contador = $contador + 1; ?></center>
+                                                </td>
+                                                <td><?php echo $categorias_dato['nombre_categoria']; ?></td>
+                                                <td>
+                                                    <center>
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-update<?php echo $id_categorias; ?>">
+                                                                <i class="fa fa-pencil-alt"></i> Editar
+                                                            </button>
+                                                            <!-- modal para actualizar categorias-->
+                                                            <div class="modal fade" id="modal-update<?php echo $id_categorias; ?>">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header" style="background-color:rgb(15, 119, 55); color: white">
+                                                                            <h4 class="modal-title">Actualizar Categoria</h4>
+                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                <span aria-hidden="true">&times;</span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Nombre de la Categoria <b style="color:red;">*</b></label>
+                                                                                        <input type="text" class="form-control" id="nombre_categoria<?php echo $id_categorias; ?>" value="<?php echo $nombre_categoria; ?>">
+                                                                                        <small style="color:red; display:none;" id="lbl_update<?php echo $id_categorias; ?>"><b style="color:red;">*</b> Este campo es obligatorio</small>
+
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
+                                                                        <div class="modal-footer justify-content-between">
+                                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                                                            <button type="button" class="btn btn-success" id="btn_update<?php echo $id_categorias; ?>">Actualizar</button>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="modal-footer justify-content-between">
-                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                                                                        <button type="button" class="btn btn-success" id="btn_update<?php echo $id_categorias; ?>">Actualizar</button>
-                                                                    </div>
+                                                                    <!-- /.modal-content -->
                                                                 </div>
-                                                                <!-- /.modal-content -->
+                                                                <!-- /.modal-dialog -->
                                                             </div>
-                                                            <!-- /.modal-dialog -->
+                                                            <!-- /.modal -->
+                                                            <script>
+                                                                $('#btn_update<?php echo $id_categorias; ?>').click(function() {
+                                                                    var nombre_categoria = $('#nombre_categoria<?php echo $id_categorias; ?>').val();
+                                                                    var id_categoria = '<?php echo $id_categorias; ?>';
+                                                                    if (nombre_categoria == "") {
+                                                                        $('#nombre_categoria<?php echo $id_categorias; ?>').focus();
+                                                                        $('#lbl_update<?php echo $id_categorias; ?>').css('display', 'block');
+                                                                    } else {
+                                                                        // alert(nombre_categoria);
+                                                                        var url = "../app/controllers/categorias/update_de_categorias.php";
+                                                                        $.get(url, {
+                                                                            nombre_categoria: nombre_categoria,
+                                                                            id_categoria: id_categoria
+                                                                        }, function(datos) {
+                                                                            // alert("fue al controlador");
+                                                                            $('#respuesta_update<?php echo $id_categorias; ?>').html(datos);
+                                                                        });
+                                                                    }
+
+                                                                });
+                                                            </script>
+                                                            <div id="respuesta_update<?php echo $id_categorias; ?>"></div>
                                                         </div>
-                                                        <!-- /.modal -->
-                                                        <script>
-                                                            $('#btn_update<?php echo $id_categorias; ?>').click(function() {
-                                                                var nombre_categoria = $('#nombre_categoria<?php echo $id_categorias; ?>').val();
-                                                                var id_categoria = '<?php echo $id_categorias; ?>';
-                                                                if (nombre_categoria == "") {
-                                                                    $('#nombre_categoria<?php echo $id_categorias; ?>').focus();
-                                                                    $('#lbl_update<?php echo $id_categorias; ?>').css('display', 'block');
-                                                                } else {
-                                                                    // alert(nombre_categoria);
-                                                                    var url = "../app/controllers/categorias/update_de_categorias.php";
-                                                                    $.get(url, {
-                                                                        nombre_categoria: nombre_categoria,
-                                                                        id_categoria: id_categoria
-                                                                    }, function(datos) {
-                                                                        // alert("fue al controlador");
-                                                                        $('#respuesta_update<?php echo $id_categorias; ?>').html(datos);
-                                                                    });
-                                                                }
+                                                    </center>
+                                                </td>
+                                            </tr>
+                                        <?php
+                                        }
+                                        ?>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>
+                                                <center>Nro</center>
+                                            </th>
+                                            <th>
+                                                <center>Nombre Categoria</center>
+                                            </th>
+                                            <th>
+                                                <center>Acciones</center>
+                                            </th>
 
-                                                            });
-                                                        </script>
-                                                        <div id="respuesta_update<?php echo $id_categorias; ?>"></div>
-                                                    </div>
-                                                </center>
-                                            </td>
                                         </tr>
-                                    <?php
-                                    }
-                                    ?>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>
-                                            <center>Nro</center>
-                                        </th>
-                                        <th>
-                                            <center>Nombre Categoria</center>
-                                        </th>
-                                        <th>
-                                            <center>Acciones</center>
-                                        </th>
-
-                                    </tr>
-                                </tfoot>
-                            </table>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
                         </div>
-                        <!-- /.card-body -->
                     </div>
                 </div>
-            </div>
-            <!-- /.row -->
-        </div><!-- /.container-fluid -->
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content -->
     </div>
-    <!-- /.content -->
+    <!-- /.content-wrapper -->
 </div>
-<!-- /.content-wrapper -->
-
-
 <?php
 include('../layout/mensajes.php');
 include('../layout/parte2.php');

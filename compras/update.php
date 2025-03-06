@@ -201,7 +201,7 @@ include('../app/controllers/compras/cargar_compra.php');
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <input type="text" value="<?php echo $id_producto_tabla ?>" id="id_producto">
+                                                        <input type="text" value="<?php echo $id_producto_tabla ?>" id="id_producto" hidden>
                                                         <label for="">Código:</label>
 
                                                         <input type="text" value="<?php echo $codigo ?>" class="form-control"
