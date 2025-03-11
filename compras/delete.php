@@ -251,6 +251,8 @@ include('../app/controllers/compras/cargar_compra.php');
                                         $('#btn_eliminar').click(function() {
                                             var id_compra = '<?php echo $id_compra_get; ?>';
                                             var id_producto = $('#id_producto').val();
+                                            var cantidad_compra = '<?php echo $cantidad; ?>';
+                                            var stock_actual = '<?php echo $stock; ?>';
 
                                             Swal.fire({
                                                 title: "¿Confirma que desea eliminar esta compra?",
@@ -270,7 +272,9 @@ include('../app/controllers/compras/cargar_compra.php');
                                                 var url = "../app/controllers/compras/delete.php";
                                                 $.get(url, {
                                                     id_compra: id_compra,
-                                                    id_producto: id_producto
+                                                    id_producto: id_producto,
+                                                    cantidad_compra: cantidad_compra,
+                                                    stock_actual: stock_actual
                                                 }, function(datos) {
                                                     $('#respuesta_delete').html(datos);
 
