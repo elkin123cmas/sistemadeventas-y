@@ -27,6 +27,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- jQuery -->
     <script src="<?php echo $URL; ?>/public/templates/AdminLTE-3.2.0/plugins/jquery/jquery.min.js"></script>
 
+    <!--sin flechas en los input-->
+    <style>
+        /* Para WebKit (Chrome, Safari, Edge) */
+        .sin-flechas::-webkit-inner-spin-button,
+        .sin-flechas::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Para Firefox */
+        .sin-flechas {
+            -moz-appearance: textfield;
+        }
+    </style>
 
 </head>
 

@@ -129,12 +129,18 @@ include('../app/controllers/categorias/listado_de_categorias.php');
                                                         <input type="number" name="stock_maximo" class="form-control">
                                                     </div>
                                                     <div class="col-md-2">
-                                                        <label for="">Precio compra:</label>
-                                                        <input type="number" name="precio_compra" class="form-control" required>
+                                                        <label for="precio_compra">Precio compra:</label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-text">$</span>
+                                                            <input type="number" name="precio_compra" class="form-control sin-flechas" required>
+                                                        </div>
                                                     </div>
                                                     <div class="col-md-2">
-                                                        <label for="">Precio venta:</label>
-                                                        <input type="number" name="precio_venta" class="form-control" required>
+                                                        <label for="precio_venta">Precio venta:</label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-text">$</span>
+                                                            <input type="number" name="precio_venta" class="form-control sin-flechas" required>
+                                                        </div>
                                                     </div>
                                                     <div class="col-md-2">
                                                         <label for="">Fecha de ingreso:</label>
@@ -194,6 +200,7 @@ include('../app/controllers/categorias/listado_de_categorias.php');
         </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
+
 </div>
 <!-- /.content-wrapper -->
 <?php

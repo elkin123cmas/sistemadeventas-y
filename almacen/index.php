@@ -120,8 +120,9 @@ include('../app/controllers/almacen/listado_de_productos.php');
                                                 <?php
                                                 }
                                                 ?>
-                                                <td><?php echo $productos_dato['precio_compra']; ?></td>
-                                                <td><?php echo $productos_dato['precio_venta']; ?></td>
+                                                <td>$<?php echo number_format($productos_dato['precio_compra'], 0, ',', '.'); ?></td>
+
+                                                <td>$<?php echo number_format($productos_dato['precio_venta'], 0, ',', '.'); ?></td>
                                                 <td><?php echo $productos_dato['fecha_ingreso']; ?></td>
                                                 <td><?php echo $productos_dato['email']; ?></td>
                                                 <td>

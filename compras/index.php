@@ -163,7 +163,7 @@ include('../app/controllers/compras/listado_de_compras.php');
                                                                                 <div class="col-md-3">
                                                                                     <div class="form-group">
                                                                                         <label for="">Precio Compra</label>
-                                                                                        <input type="text" value="<?php echo $compras_dato['precio_compra_producto']; ?>" class="form-control" disabled>
+                                                                                        <input type="text" value="<?php echo number_format($compras_dato['precio_compra_producto'], 0, ',', '.');  ?>" class="form-control" disabled>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="col-md-3">
