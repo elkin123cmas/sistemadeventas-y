@@ -136,7 +136,7 @@ include('../app/controllers/compras/cargar_compra.php');
                                                 <div class="form-group">
                                                     <input type="text" id="id_proveedor" hidden>
                                                     <label for="">Nombre del Proveedor </label>
-                                                    <input type="text" value="<?php echo $nombre_proveedor; ?>" class="form-control" id="nombre_proveedor" disabled>
+                                                    <input type="text" value="<?php echo $nombre_proveedor_tabla; ?>" class="form-control" id="nombre_proveedor" disabled>
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
