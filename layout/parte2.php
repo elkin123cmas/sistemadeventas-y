@@ -5,7 +5,7 @@
         Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2025 <a href="#">Gestión360</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2025 <a href="#">Gestión180</a>.</strong> All rights reserved.
 </footer>
 </div>
 <!-- ./wrapper -->
