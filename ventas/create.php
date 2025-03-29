@@ -630,7 +630,7 @@ include('../app/controllers/clientes/listado_de_clientes.php');
                                                 // Si total_a_cancelar no es editable, recargarlo con el nuevo valor
                                                 $('#total_a_cancelar').val('$0');
 
-                                                location.reload();
+                                                // location.reload();
                                             });
                                         }
                                     });

@@ -282,8 +282,8 @@ include('../app/controllers/ventas/listado_de_ventas.php');
                                                 </td>
                                                 <td>
                                                     <center>
-                                                        <a href="" class="btn btn-info"><i class="fa fa-eye"></i> Ver</a>
-                                                        <a href="" class="btn btn-danger"><i class="fa fa-trash"></i> Borrar</a>
+                                                        <a href="show.php?id_venta=<?php echo $id_venta; ?>" class="btn btn-info"><i class="fa fa-eye"></i> Ver</a>
+                                                        <a href="delete.php?id_venta=<?php echo $id_venta; ?>&nro_venta=<?php echo $nro_venta; ?>" class="btn btn-danger"><i class="fa fa-trash"></i> Borrar</a>
                                                     </center>
                                                 </td>
                                             </tr>
