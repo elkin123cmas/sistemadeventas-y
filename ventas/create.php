@@ -523,7 +523,7 @@ include('../app/controllers/clientes/listado_de_clientes.php');
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="">Monto a pagar</label>
-                                <input type="text" id="total_a_cancelar" class="form-control" style="text-align: center; background-color: tan;" value="<?php echo number_format($precio_total, 0, ',', '.'); ?>" disabled>
+                                <input type="text" id="total_a_cancelar" class="form-control" style="text-align: center; background-color: tan;" value="<?php echo "$" . number_format($precio_total, 0, ',', '.'); ?>" disabled>
 
                             </div>
                             <div class="row">

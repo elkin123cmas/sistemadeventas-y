@@ -293,83 +293,81 @@ include('../app/controllers/clientes/listado_de_clientes.php');
         </div>
 
         <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</div>
+<?php
+include('../layout/mensajes.php');
+include('../layout/parte2.php');
+?>
+<script>
+    $(function() {
+        $("#example1").DataTable({
+            /* cambio de idiomas de datatable */
+            "pageLength": 5,
+            language: {
+                "emptyTable": "No hay información",
+                "decimal": "",
+                "info": "Mostrando _START_ a _END_ del TOTAL de los Productos",
+                "infoEmpty": "Mostrando 0 to 0 of 0 Productos",
+                "infoFiltered": "(Filtrado de _MAX_ total Productos)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Mostrar _MENU_ Productos",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscador:",
+                "zeroRecords": "Sin resultados encontrados",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Ultimo",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                }
+            },
+            /* fin de idiomas */
+            "responsive": true,
+            "lengthChange": true,
+            "autoWidth": false,
+            /* Ajuste de botones */
 
+            /*Fin de ajuste de botones*/
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
 
+    });
 
+    $(function() {
+        $("#example2").DataTable({
+            /* cambio de idiomas de datatable */
+            "pageLength": 5,
+            language: {
+                "emptyTable": "No hay información",
+                "decimal": "",
+                "info": "Mostrando _START_ a _END_ del TOTAL de los Clientes",
+                "infoEmpty": "Mostrando 0 to 0 of 0 Clientes",
+                "infoFiltered": "(Filtrado de _MAX_ total Clientes)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Mostrar _MENU_ Clientes",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscador:",
+                "zeroRecords": "Sin resultados encontrados",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Ultimo",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                }
+            },
+            /* fin de idiomas */
+            "responsive": true,
+            "lengthChange": true,
+            "autoWidth": false,
+            /* Ajuste de botones */
 
+            /*Fin de ajuste de botones*/
+        }).buttons().container().appendTo('#example2_wrapper .col-md-6:eq(0)');
 
-        <?php
-        include('../layout/mensajes.php');
-        include('../layout/parte2.php');
-        ?>
-        <script>
-            $(function() {
-                $("#example1").DataTable({
-                    /* cambio de idiomas de datatable */
-                    "pageLength": 5,
-                    language: {
-                        "emptyTable": "No hay información",
-                        "decimal": "",
-                        "info": "Mostrando _START_ a _END_ del TOTAL de los Productos",
-                        "infoEmpty": "Mostrando 0 to 0 of 0 Productos",
-                        "infoFiltered": "(Filtrado de _MAX_ total Productos)",
-                        "infoPostFix": "",
-                        "thousands": ",",
-                        "lengthMenu": "Mostrar _MENU_ Productos",
-                        "loadingRecords": "Cargando...",
-                        "processing": "Procesando...",
-                        "search": "Buscador:",
-                        "zeroRecords": "Sin resultados encontrados",
-                        "paginate": {
-                            "first": "Primero",
-                            "last": "Ultimo",
-                            "next": "Siguiente",
-                            "previous": "Anterior"
-                        }
-                    },
-                    /* fin de idiomas */
-                    "responsive": true,
-                    "lengthChange": true,
-                    "autoWidth": false,
-                    /* Ajuste de botones */
-
-                    /*Fin de ajuste de botones*/
-                }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-
-            });
-
-            $(function() {
-                $("#example2").DataTable({
-                    /* cambio de idiomas de datatable */
-                    "pageLength": 5,
-                    language: {
-                        "emptyTable": "No hay información",
-                        "decimal": "",
-                        "info": "Mostrando _START_ a _END_ del TOTAL de los Clientes",
-                        "infoEmpty": "Mostrando 0 to 0 of 0 Clientes",
-                        "infoFiltered": "(Filtrado de _MAX_ total Clientes)",
-                        "infoPostFix": "",
-                        "thousands": ",",
-                        "lengthMenu": "Mostrar _MENU_ Clientes",
-                        "loadingRecords": "Cargando...",
-                        "processing": "Procesando...",
-                        "search": "Buscador:",
-                        "zeroRecords": "Sin resultados encontrados",
-                        "paginate": {
-                            "first": "Primero",
-                            "last": "Ultimo",
-                            "next": "Siguiente",
-                            "previous": "Anterior"
-                        }
-                    },
-                    /* fin de idiomas */
-                    "responsive": true,
-                    "lengthChange": true,
-                    "autoWidth": false,
-                    /* Ajuste de botones */
-
-                    /*Fin de ajuste de botones*/
-                }).buttons().container().appendTo('#example2_wrapper .col-md-6:eq(0)');
-
-            });
-        </script>
+    });
+</script>
